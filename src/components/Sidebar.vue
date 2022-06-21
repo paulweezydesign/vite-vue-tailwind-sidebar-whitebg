@@ -25,10 +25,10 @@
     <Dialog as="div" @close="closeSidebar" class="relative z-10">
       <TransitionChild
         as="template"
-        enter="duration-300 ease-out"
+        enter="duration-400 ease-in-out transition"
         enter-from="opacity-0"
         enter-to="opacity-100"
-        leave="duration-200 ease-in"
+        leave="duration-400 ease-in"
         leave-from="opacity-100"
         leave-to="opacity-0"
       >
@@ -39,17 +39,16 @@
         <div class="flex min-h-full items-center justify-center text-center">
           <TransitionChild
             as="template"
-            enter="duration-300 ease-out"
-            enter-from="opacity-0 scale-95"
-            enter-to="opacity-100 scale-100"
-            leave="duration-200 ease-in"
-            leave-from="opacity-100 scale-100"
-            leave-to="opacity-0 scale-95"
+            enter="transition ease-in duration-[.8s] transform"
+            enter-from="translate-x-full "
+            leave="transition ease-in duration-[.5s] transform"
+            leave-from="translate-x-0"
+            leave-to="-translate-x-full"
           >
             <DialogPanel
               class="
                 w-full
-                transform
+                -translate
                 overflow-hidden
                 bg-white
                 px-6
@@ -58,13 +57,13 @@
                 shadow-xl
                 transition-all
                 top-0
-                right-0
+                left-0
                 absolute
                 h-[100vh]
                 md:w-[450px]
               "
             >
-              <div class="mt-2">
+              <div class="mt-2 flex justify-end">
                 <button
                   type="button"
                   class="
