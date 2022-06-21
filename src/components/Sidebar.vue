@@ -1,16 +1,16 @@
 <template>
-  <div class="fixed inset-0">
+  <div class="lg:hidden">
     <button
       type="button"
       @click="openSidebar"
       class="
         rounded-md
-        bg-black bg-opacity-20
+        bg-transparent
         px-4
         py-2
-        text-sm
+        text-2xl
         font-medium
-        text-white
+        text-black/90
         hover:bg-opacity-30
         focus:outline-none
         focus-visible:ring-2
@@ -32,13 +32,11 @@
         leave-from="opacity-100"
         leave-to="opacity-0"
       >
-        <div class="fixed inset-0 bg-black bg-opacity-25" />
+        <div class="fixed inset-0 bg-black bg-opacity-40" />
       </TransitionChild>
 
       <div class="fixed inset-0 overflow-y-auto">
-        <div
-          class="flex min-h-full items-center justify-center p-4 text-center"
-        >
+        <div class="flex min-h-full items-center justify-center text-center">
           <TransitionChild
             as="template"
             enter="duration-300 ease-out"
@@ -50,7 +48,7 @@
           >
             <DialogPanel
               class="
-                max-w-md
+                w-full
                 transform
                 overflow-hidden
                 bg-white
@@ -63,16 +61,9 @@
                 right-0
                 absolute
                 h-[100vh]
-                w-[450px]
+                md:w-[450px]
               "
             >
-              <DialogTitle
-                as="h2"
-                class="text-2xl font-black leading-6 text-gray-900 text-center"
-              >
-                Menu
-              </DialogTitle>
-
               <div class="mt-4">
                 <button
                   type="button"
@@ -97,7 +88,12 @@
                   <i class="fa fa-times" />
                 </button>
               </div>
-
+              <DialogTitle
+                as="h2"
+                class="text-2xl font-black leading-6 text-gray-900 text-center"
+              >
+                Menu
+              </DialogTitle>
               <div class="mt-2 flex flex-col">
                 <a href="/">Home</a>
                 <a href="/about">About</a>
