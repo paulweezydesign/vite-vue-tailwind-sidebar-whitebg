@@ -52,7 +52,7 @@
                 transform
                 overflow-hidden
                 bg-white
-                p-6
+                px-6
                 text-left
                 align-middle
                 shadow-xl
@@ -64,18 +64,17 @@
                 md:w-[450px]
               "
             >
-              <div class="mt-4">
+              <div class="mt-2">
                 <button
                   type="button"
                   class="
                     inline-flex
                     justify-center
                     rounded-md
-                    text-3xl
                     border border-transparent
                     px-4
                     py-2
-                    text-sm
+                    text-3xl
                     font-medium
                     text-blue-900
                     focus:outline-none
@@ -90,14 +89,26 @@
               </div>
               <DialogTitle
                 as="h2"
-                class="text-2xl font-black leading-6 text-gray-900 text-center"
+                class="text-3xl font-black leading-6 text-gray-900 text-center"
               >
                 Menu
               </DialogTitle>
-              <div class="mt-2 flex flex-col">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
+              <div class="mt-2 flex flex-col items-center h-full mt-60">
+                <a
+                  class="mb-4 text-black/90 font-bold text-2xl uppercase"
+                  href="/"
+                  >Home</a
+                >
+                <a
+                  class="mb-4 text-black/90 font-bold text-2xl uppercase"
+                  href="/about"
+                  >About</a
+                >
+                <a
+                  class="mb-4 text-black/90 font-bold text-2xl uppercase"
+                  href="/contact"
+                  >Contact</a
+                >
               </div>
             </DialogPanel>
           </TransitionChild>
