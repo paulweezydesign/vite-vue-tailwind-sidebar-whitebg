@@ -38,14 +38,10 @@ export default {
     </div>
     <div class="flex justify-end">
       <a class="uppercase mr-8 text-black/90 font-bold" href="#/">Home</a> |
-      <a class="uppercase mr-8 text-black/90 font-bold" href="#/about">About</a>
-      |
-      <a class="uppercase mr-8 text-black/90 font-bold" href="#/kittens"
-        >Kittens</a
-      >
-      |
+      <a class="uppercase mr-8 text-black/90 font-bold" href="#/about">About</a> |
+      <a class="uppercase mr-8 text-black/90 font-bold" href="#/kittens">Kittens</a> |
       <a class="uppercase text-black/90 font-bold" href="#/contact">Contact</a>
-      |
+      
     </div>
   </nav>
   <component class="text-black/90" :is="currentView" />
