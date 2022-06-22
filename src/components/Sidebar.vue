@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:hidden">
+  <div class="">
     <button
       type="button"
       @click="openSidebar"
