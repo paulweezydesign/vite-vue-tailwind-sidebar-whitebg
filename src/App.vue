@@ -32,9 +32,21 @@ export default {
 </script>
 
 <template>
-  <nav class="">
-    <a href="#/">Home</a> | <a href="#/about">About</a> |
-    <a href="#/kittens">Kittens</a> | <a href="#/contact">Contact</a> |
+  <nav class="grid grid-cols-2 items-center px-[8%] py-4 w-[100vw]">
+    <div class="text-xl font-black text-black/90 uppercase">
+      My Cute Kittens
+    </div>
+    <div class="flex justify-end">
+      <a class="uppercase mr-8 text-black/90 font-bold" href="#/">Home</a> |
+      <a class="uppercase mr-8 text-black/90 font-bold" href="#/about">About</a>
+      |
+      <a class="uppercase mr-8 text-black/90 font-bold" href="#/kittens"
+        >Kittens</a
+      >
+      |
+      <a class="uppercase text-black/90 font-bold" href="#/contact">Contact</a>
+      |
+    </div>
   </nav>
-  <component :is="currentView" />
+  <component class="text-black/90" :is="currentView" />
 </template>
